@@ -1,10 +1,12 @@
 #facilities {
   ul {
-    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     li {
       display: inline-block;
-      width: 49%;
       line-height: 2em;
+      min-width: 40px;
     }
   }
 }
