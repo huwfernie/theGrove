@@ -4,6 +4,14 @@ $thumbnail_size: 40px;
 #gallery {
   .gallery {
     width: $width;
+    @media (min-width: 736px) and (max-width: 1067px) {
+      width: 100%;
+      max-width: 680px;
+    }
+    @media (max-width: 735px) {
+      width: 100%;
+      max-width: 680px;
+    }
     margin: 0 auto;
 
     &-hero {
@@ -40,6 +48,10 @@ $thumbnail_size: 40px;
         }
 
       }
+    }
+
+    &-buttons {
+      text-align: center;
     }
   }
 }
