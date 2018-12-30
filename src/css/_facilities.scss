@@ -6,13 +6,15 @@
 
   ul {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 
     li {
       display: inline-block;
       line-height: 2em;
-      min-width: 40px;
+      min-width: 80px;
+      padding: 0 20px;
     }
   }
 }
