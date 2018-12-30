@@ -25,6 +25,7 @@ figure {
   padding: 0 40px;
   display: block;
   box-sizing: border-box;
+  overflow-x: hidden;
 
   @media (min-width: 736px) and (max-width: 1067px) {
     max-width: 1068px;
@@ -43,8 +44,9 @@ figure {
   width: 100%;
 
   &-flex {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .large-{
