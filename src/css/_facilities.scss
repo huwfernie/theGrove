@@ -1,8 +1,14 @@
 #facilities {
+
+  .section-content {
+    padding: 20px 0;
+  }
+
   ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
     li {
       display: inline-block;
       line-height: 2em;
