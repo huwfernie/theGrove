@@ -2,7 +2,7 @@ console.log('The Grove');
 
 
 const thumbnails = document.querySelectorAll('.gallery-thumbnails figure');
-const galleryHero = document.querySelector('.gallery-hero figure');
+const galleryHero = document.querySelector('.gallery-hero img');
 const nextButtons = document.querySelectorAll('.next-button');
 const prevButtons = document.querySelectorAll('.prev-button');
 
@@ -22,8 +22,8 @@ function updateHero(newId) {
   const string = `./assets/gallery/fullsize/${newId}.jpg`;
 
   if(string) {
-    galleryHero.style.backgroundImage = `url(${string})`;
     galleryHero.dataset.order_id = newId;
+    galleryHero.src = string;
   }
 }
 

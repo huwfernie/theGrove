@@ -21,11 +21,8 @@ $thumbnail_size: 40px;
       width: 100%;
       height: 100%;
 
-      figure {
-        height: 460px;
-        width: $width;
-        background-size: cover;
-        background-image: url('../../assets/gallery/fullsize/1.jpg');
+      img {
+        width: 100%;
       }
     }
 
