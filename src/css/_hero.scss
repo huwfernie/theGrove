@@ -21,9 +21,16 @@
     }
   }
 
-  h1 {
+  h1, h2 {
     position: absolute;
-    top: 50px;
     left: 40px;
+  }
+
+  h1 {
+    top: 50px;
+  }
+
+  h2 {
+    top: 80px;
   }
 }
