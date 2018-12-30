@@ -1,8 +1,6 @@
 #prices {
-  .section-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .row-flex {
+    min-height: 70px;
 
     span {
       margin: 0 20px;
