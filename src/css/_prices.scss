@@ -1,0 +1,20 @@
+#prices {
+  .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    span {
+      margin: 0 20px;
+      width: 50%;
+    }
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+
+    }
+
+    @media (max-width: 735px) {
+
+    }
+  }
+}

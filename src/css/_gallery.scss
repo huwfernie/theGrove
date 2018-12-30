@@ -1,0 +1,45 @@
+$width: 700px;
+$thumbnail_size: 40px;
+
+#gallery {
+  .gallery {
+    width: $width;
+    margin: 0 auto;
+
+    &-hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      figure {
+        height: 460px;
+        width: $width;
+        background-size: cover;
+        background-image: url('../../assets/gallery/fullsize/1.jpg');
+      }
+    }
+
+    &-thumbnails {
+      display: flex;
+      align-items: center;
+
+      figure {
+        height: $thumbnail_size;
+        width: $thumbnail_size;
+        margin-top: 3px;
+        margin-left: 3px;
+        background-size: cover;
+        &:first-child {
+          margin-left: 0px;
+        }
+
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            background-image: url('../../assets/gallery/thumbnail/#{$i}.jpg');
+          }
+        }
+
+      }
+    }
+  }
+}

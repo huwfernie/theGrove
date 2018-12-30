@@ -6,7 +6,7 @@ const plumber    = require('gulp-plumber');
 const sequence   = require('gulp-sequence');
 const notify     = require('gulp-notify');
 const del        = require('del');
-const minify     = require("gulp-babel-minify");
+const minify     = require('gulp-babel-minify');
 
 const src = 'src';
 const dist = 'public';
@@ -45,7 +45,7 @@ gulp.task('sass', () => {
 
 gulp.task('assets', () => {
   return gulp.src(`${src}/assets/**/*`)
-  .pipe(gulp.dest(`${dist}/assets`));
+    .pipe(gulp.dest(`${dist}/assets`));
 });
 
 gulp.task('watch', () => {

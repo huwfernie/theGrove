@@ -1,3 +1,15 @@
-body {
-  background-color: blue;
-}
+@import './_testing.scss';
+
+@import './_template.scss';
+@import './_swatch.scss';
+@import './_typography.scss';
+
+@import './_hero.scss';
+@import './_pageNav.scss';
+@import './_about.scss';
+@import './_prices.scss';
+@import './_gallery.scss';
+@import './_facilities.scss';
+@import './_falmouth.scss';
+@import './_reviews.scss';
+@import './_contact.scss';

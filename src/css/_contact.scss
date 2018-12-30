@@ -1,0 +1,22 @@
+#contact {
+  background: $contactBackground;
+
+  .section-content {
+    padding: 20px 0;
+
+    .row-flex {
+      justify-content: flex-start;
+      .col.large-33 {
+        width: 33%;
+      }
+    }
+  }
+
+  @media (min-width: 736px) and (max-width: 1067px) {
+
+  }
+
+  @media (max-width: 735px) {
+
+  }
+}

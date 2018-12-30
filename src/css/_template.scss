@@ -1,0 +1,58 @@
+@import './_swatch.scss';
+
+body {
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1260px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: block;
+  box-sizing: border-box;
+
+  @media (min-width: 736px) and (max-width: 1067px) {
+    max-width: 1068px;
+    min-width: 736px;
+    padding: 40px 40px;
+  }
+
+  @media (max-width: 735px) {
+    width: 87.5%;
+    max-width: 735px;
+    padding: 0;
+  }
+}
+
+.row {
+  width: 100%;
+
+  &-flex {
+  display: flex;
+  align-items: center;
+  }
+
+  .large-{
+    &50 {
+      flex: 0 0 50%;
+    }
+    &100 {
+      flex: 0 0 100%;
+    }
+  }
+}

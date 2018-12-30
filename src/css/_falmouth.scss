@@ -1,0 +1,27 @@
+#falmouth {
+  .row span:first-child {
+    box-sizing: border-box;
+    padding-right: 20px;
+    text-align: right;
+  }
+
+  .image-falmouth-map {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-image: url('../../assets/map_lrg.png');
+    background-position: center top;
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+      width: 100%;
+      height: 400px;
+      background-image: url('../../assets/map_med.png');
+    }
+
+    @media (max-width: 736px) {
+      width: 100%;
+      height: 400px;
+      background-image: url('../../assets/map_sml.png');
+    }
+  }
+}

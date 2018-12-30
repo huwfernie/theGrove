@@ -1,0 +1,44 @@
+.typography- {
+  &hero {
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+
+    }
+
+    @media (max-width: 735px) {
+
+    }
+  }
+  &intro {
+    font-size: 28px;
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+
+    }
+
+    @media (max-width: 735px) {
+
+    }
+  }
+  &test {
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+
+    }
+
+    @media (max-width: 735px) {
+
+    }
+  }
+  &falmouth {
+    font-size: 23px;
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+
+    }
+
+    @media (max-width: 735px) {
+
+    }
+  }
+}

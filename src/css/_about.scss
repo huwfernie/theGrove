@@ -1,0 +1,15 @@
+#about {
+  .intro {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 736px) and (max-width: 1067px) {
+      width: 800px;
+    }
+
+    @media (max-width: 735px) {
+      width: 800px;
+    }
+  }
+}
