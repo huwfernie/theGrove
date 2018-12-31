@@ -1,3 +1,4 @@
+$numberOfImages: 29;
 $width: 700px;
 $thumbnail_size: 40px;
 
@@ -24,25 +25,28 @@ $thumbnail_size: 40px;
 
       img {
         width: 100%;
+        max-height: 450px;
       }
     }
 
     &-thumbnails {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: end;
 
       figure {
         height: $thumbnail_size;
         width: $thumbnail_size;
         margin-top: 3px;
-        margin-left: 3px;
+        margin-right: 3px;
         background-size: cover;
         cursor: pointer;
-        &:first-child {
+        &:first-child, &:nth-child(16) {
           margin-left: 0px;
         }
 
-        @for $i from 1 through 3 {
+        @for $i from 1 through $numberOfImages {
           &:nth-child(#{$i}) {
             background-image: url('../../assets/gallery/thumbnail/#{$i}.jpg');
           }
