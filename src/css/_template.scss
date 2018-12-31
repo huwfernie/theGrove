@@ -1,12 +1,13 @@
 @import './_swatch.scss';
 
 body {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-family: "Georgia", "Times", "g", serif;
   background-color: $background;
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 figure {

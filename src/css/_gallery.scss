@@ -56,9 +56,9 @@ $thumbnail_size: 40px;
     }
 
     &-buttons {
-      position: relative;
-      bottom: -440px;
-      margin-bottom: -50px;
+      width: 100%;
+      position: absolute;
+
       i {
         $i: 20px;
         background: $galleryArrowStart;
