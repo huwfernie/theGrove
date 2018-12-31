@@ -4,6 +4,8 @@ $thumbnail_size: 40px;
 #gallery {
   .gallery {
     width: $width;
+    margin: 0 auto;
+    position: relative;
     @media (min-width: 736px) and (max-width: 1067px) {
       width: 100%;
       max-width: 680px;
@@ -12,7 +14,6 @@ $thumbnail_size: 40px;
       width: 100%;
       max-width: 680px;
     }
-    margin: 0 auto;
 
     &-hero {
       display: flex;
@@ -36,6 +37,7 @@ $thumbnail_size: 40px;
         margin-top: 3px;
         margin-left: 3px;
         background-size: cover;
+        cursor: pointer;
         &:first-child {
           margin-left: 0px;
         }
@@ -50,7 +52,30 @@ $thumbnail_size: 40px;
     }
 
     &-buttons {
-      text-align: center;
+      position: relative;
+      bottom: -440px;
+      margin-bottom: -50px;
+      i {
+        $i: 20px;
+        background: $galleryArrowStart;
+        padding: $i;
+        border-radius: #{$i*2};
+        transition: background 0.3s;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          float: left;
+          margin-left: 20px;
+        }
+        &:nth-child(2) {
+          float: right;
+          margin-right: 20px;
+        }
+
+        &:hover {
+          background: $galleryArrowHover;
+        }
+      }
     }
   }
 }
