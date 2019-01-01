@@ -1,7 +1,6 @@
 @import './_swatch.scss';
 
 body {
-  font-family: "Georgia", "Times", "g", serif;
   background-color: $background;
   margin: 0;
   padding: 0;
@@ -24,7 +23,7 @@ figure {
   max-width: 1260px;
   min-height: 100px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 40px 40px;
   display: block;
   box-sizing: border-box;
   overflow-x: hidden;

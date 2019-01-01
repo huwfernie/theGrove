@@ -6,21 +6,26 @@
 
     .row-flex {
       justify-content: flex-start;
-      .col.large-33 {
-        width: 33%;
+      flex-wrap: wrap;
+      .col {
+
+        &.large-33 {
+          width: 33%;
+        }
+
+        @media (max-width: 735px) {
+          &:nth-child(2) { order: 2; margin-bottom: 10px;}
+          &:nth-child(3) { order: 1; }
+          &.small-100 {
+            width: 100%;
+            margin-top: 13px;
+          }
+        }
       }
     }
 
     a {
       text-decoration: none;
     }
-  }
-
-  @media (min-width: 736px) and (max-width: 1067px) {
-
-  }
-
-  @media (max-width: 735px) {
-
   }
 }

@@ -1,23 +1,30 @@
+body {
+  font-family: "Georgia", "Times", "g", serif;
+}
+
 .typography- {
   &hero {
+    h1 { font-size: 42px;}
+    h2 { font-size: 32px;}
 
     @media (min-width: 736px) and (max-width: 1067px) {
-
+      h1 { font-size: 40px;}
+      h2 { font-size: 30px;}
     }
 
     @media (max-width: 735px) {
-
+      h1 { font-size: 35px;}
+      h2 { font-size: 25px;}
     }
   }
   &intro {
     font-size: 28px;
 
     @media (min-width: 736px) and (max-width: 1067px) {
-
+      font-size: 26px;
     }
-
     @media (max-width: 735px) {
-
+      font-size: 24px;
     }
   }
   &test {
@@ -34,11 +41,10 @@
     font-size: 23px;
 
     @media (min-width: 736px) and (max-width: 1067px) {
-
+      font-size: 22px;
     }
-
     @media (max-width: 735px) {
-
+      font-size: 21px;
     }
   }
 }

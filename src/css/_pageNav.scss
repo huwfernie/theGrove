@@ -1,23 +1,71 @@
 .page-nav {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid $pageNavUnderline;
   margin-bottom: 50px;
 
   ul {
     list-style: none;
     text-align: center;
 
-    a {
-      text-decoration: none;
-      color: $copy;
-      letter-spacing: 1px;
+    li {
+      display: inline-block;
+      margin: 0 20px;
 
-      &:hover {
-        text-decoration: underline;
+      a {
+        text-decoration: none;
+        color: $copy;
+        letter-spacing: 1px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
+      &.booking {
+        border: 2px solid $bookingBoarder;
+        padding: 5px;
+        border-radius: 16px;
+        transition: background 0.3s;
+
+        &:hover {
+          background: $bookingBoarder;
+          color: white;
+
+          a {
+            color: white;
+
+              &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+
+//Hide options as screen size reduces
+    @media (max-width: 795px) {
+      li:first-child {
+        display: none;
+      }
+    }
+    @media (max-width: 795px) {
+      li:nth-child(2) {
+        display: none;
+      }
+    }
+    @media (max-width: 569px) {
+      li:nth-child(3) {
+        display: none;
+      }
+    }
+    @media (max-width: 469px) {
+      li:nth-child(4) {
+        display: none;
+      }
+    }
+    @media (max-width: 340px) {
       li {
-        display: inline;
-        margin: 0 20px;
+        margin: 0 10px;
       }
     }
   }

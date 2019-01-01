@@ -21,33 +21,24 @@
     }
   }
 
-  position: relative;
   .hero-text {
     position: absolute;
-    left: 230px;
+    min-width: 300px;
+    left: 25%;
     top: 80px;
     padding: 10px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.1);
+    background: $heroTextBackground;
 
     @media (max-width: 736px) {
       text-align: center;
-      left: 10%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     h1, h2 {
       color: white;
       margin: 0;
-    }
-
-    h1 {
-      top: 50px;
-      font-size: 40px;
-    }
-
-    h2 {
-      top: 100px;
-      font-size: 30px;
     }
   }
 }
