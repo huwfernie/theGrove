@@ -1,6 +1,3 @@
-console.log('The Grove');
-
-
 const thumbnails = document.querySelectorAll('.gallery-thumbnails figure');
 const galleryHero = document.querySelector('.gallery-hero img');
 const gallerySpinner = document.querySelector('.gallery-hero .loading');
