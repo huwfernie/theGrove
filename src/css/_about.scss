@@ -1,8 +1,12 @@
 #about {
   .intro {
     max-width: 800px;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
+
+    p:first-child {
+      margin-top: 0;
+    }
 
     @media (min-width: 736px) and (max-width: 1067px) {
       width: 100%;

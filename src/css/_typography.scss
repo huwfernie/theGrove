@@ -1,5 +1,14 @@
 body {
   font-family: "Georgia", "Times", "g", serif;
+  font-size: 18px;
+
+  @media (min-width: 736px) and (max-width: 1067px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 735px) {
+    font-size: 16px;
+  }
 }
 
 .typography- {
@@ -25,6 +34,17 @@ body {
     }
     @media (max-width: 735px) {
       font-size: 24px;
+    }
+
+    &-point {
+      font-size: 18px;
+
+      @media (min-width: 736px) and (max-width: 1067px) {
+        font-size: 20px;
+      }
+      @media (max-width: 735px) {
+        font-size: 18px;
+      }
     }
   }
   &test {
