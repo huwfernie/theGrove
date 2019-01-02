@@ -27,6 +27,16 @@ $thumbnail_size: 40px;
       img {
         width: 100%;
         max-height: 450px;
+
+        &:first-child {
+          z-index: 2;
+        }
+
+        &.loading {
+          position: absolute;
+          z-index: 1;
+          background: $spinnerBackground;
+        }
       }
     }
 
@@ -59,6 +69,7 @@ $thumbnail_size: 40px;
     &-buttons {
       width: 100%;
       position: absolute;
+      z-index: 4;
 
       i {
         $i: 20px;

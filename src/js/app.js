@@ -3,6 +3,7 @@ console.log('The Grove');
 
 const thumbnails = document.querySelectorAll('.gallery-thumbnails figure');
 const galleryHero = document.querySelector('.gallery-hero img');
+const gallerySpinner = document.querySelector('.gallery-hero .loading');
 const nextButtons = document.querySelectorAll('.next-button');
 const prevButtons = document.querySelectorAll('.prev-button');
 
@@ -22,11 +23,31 @@ function updateHero(newId) {
   const string = `./assets/gallery/fullsize/${newId}.jpg`;
 
   if(string) {
+    //show spinner
+    //PreLoad image
+    //hide spinner
+    showSpinner();
     galleryHero.dataset.order_id = newId;
-    galleryHero.src = string;
+    PreLoadImage(string, (()=>{
+      galleryHero.src = string;
+      hideSpinner();
+    }),(()=>{
+      //on Error skip over to next image
+        clickedNext();
+      })
+    );
   }
 }
 
+function showSpinner() {
+  gallerySpinner.style.zIndex = '3';
+}
+
+function hideSpinner() {
+  gallerySpinner.style.zIndex = '1';
+}
+
+//Click Handlers
 function clickedThumbnail() {
   const newId = this.dataset.order_id;
   updateHero(newId);
@@ -46,4 +67,17 @@ function clickedPrevious() {
   let next = parseInt(current) - 1;
   next = (next < 1)? total : next;
   updateHero(next);
+}
+
+// Image PreLoading
+function PreLoadImage( srcURL, callback, errorCallback ) {
+  var thePic = new Image();
+  thePic.onload = function() {
+    callback();
+    thePic.onload = function(){};
+  };
+  thePic.onerror = function() {
+    errorCallback();
+  };
+  thePic.src = srcURL;
 }
