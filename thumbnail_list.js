@@ -10,7 +10,7 @@ console.log('Starting thumnail_list');
 
 
 const fs = require('fs');
-const testing = true;
+const testing = false;
 const indexSrc = './src/index.html';
 const indexDest = './index.html';
 const fullsizeFolder = './assets/gallery/fullsize/';
