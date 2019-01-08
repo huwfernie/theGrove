@@ -18,6 +18,7 @@ prevButtons.forEach((button) => {
 
 function updateHero(newId) {
   const string = `./assets/gallery/fullsize/${newId}.jpg`;
+  const oldId = galleryHero.dataset.order_id;
 
   if(string) {
     //show spinner
@@ -29,8 +30,13 @@ function updateHero(newId) {
       galleryHero.src = string;
       hideSpinner();
     }),(()=>{
-      //on Error skip over to next image
-        clickedNext();
+      //on Error skip over to next or previous image
+        window.console.clear();
+        if (newId >= oldId) {
+          clickedNext();
+        } else {
+          clickedPrevious();
+        }
       })
     );
   }
