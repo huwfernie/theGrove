@@ -1,4 +1,3 @@
-$numberOfImages: 29;
 $width: 700px;
 $thumbnail_size: 40px;
 
@@ -53,16 +52,6 @@ $thumbnail_size: 40px;
         margin-right: 3px;
         background-size: cover;
         cursor: pointer;
-        &:first-child, &:nth-child(16) {
-          margin-left: 0px;
-        }
-
-        @for $i from 1 through $numberOfImages {
-          &:nth-child(#{$i}) {
-            background-image: url('../../assets/gallery/thumbnail/#{$i}.jpg');
-          }
-        }
-
       }
     }
 

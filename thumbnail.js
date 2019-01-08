@@ -1,7 +1,7 @@
 console.log('Starting thumbnails');
 
-const thumbnail_height = 40;
-const thumbnail_width = 40;
+const thumbnailHeight = 40;
+const thumbnailWidth = 40;
 
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +16,7 @@ const thumbnailFolder = './assets/gallery/thumbnail/';
 fs.readdirSync(fullsizeFolder).forEach(file => {
   testing ? console.log(file) : null;
   sharp(path.join(fullsizeFolder, file))
-    .resize(thumbnail_width, thumbnail_height)
+    .resize(thumbnailWidth, thumbnailHeight)
     .toFile((path.join(thumbnailFolder, file)), (err, info) => {
       if (err) {
         testing ? console.log(err) : null;
