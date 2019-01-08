@@ -13,3 +13,8 @@ Adding a node script that will make (40x40px) thumbnails from all the images in 
 and save them into `./assets/gallery/thumbnail/*.jpg`
 
 run `node thumbnail.js` from terminal to generate.
+
+After the thumbnails are created run: `node thumbnail_list.js` which will produce the correct number of <b><figure\></b> elements for each thumbnail, they also have inline background image styles.
+
+*Important note*
+This now means that edits to any HTML should be done in `./src/index.html` followed by running `node thumbnail_list.js`
