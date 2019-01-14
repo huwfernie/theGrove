@@ -15,9 +15,6 @@ Size: 700 x 450px
 
 Thumbnails auto generated, see readme.
 
-### Gallery Spinner
-Shown while images are loading; resize to match gallery images above.
-
 ### OG image
 1 new one with meta tag for social sharing
 
