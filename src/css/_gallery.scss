@@ -28,10 +28,12 @@ $thumbnail_size: 40px;
         max-height: 450px;
 
         &:first-child {
+          // active image gets z-index 2.
           z-index: 2;
         }
 
         &.loading {
+          // Loading spinner gets z-index 1, toggled to 3 during loading, then back to 1.
           position: absolute;
           z-index: 1;
           background: $spinnerBackground;
@@ -39,23 +41,8 @@ $thumbnail_size: 40px;
       }
     }
 
-    &-thumbnails {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: end;
-
-      figure {
-        height: $thumbnail_size;
-        width: $thumbnail_size;
-        margin-top: 3px;
-        margin-right: 3px;
-        background-size: cover;
-        cursor: pointer;
-      }
-    }
-
     &-buttons {
+      // buttons sit on top of everything with z-index 4.
       width: 100%;
       position: absolute;
       z-index: 4;
@@ -80,6 +67,22 @@ $thumbnail_size: 40px;
         &:hover {
           background: $galleryArrowHover;
         }
+      }
+    }
+
+    &-thumbnails {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: end;
+
+      figure {
+        height: $thumbnail_size;
+        width: $thumbnail_size;
+        margin-top: 3px;
+        margin-right: 3px;
+        background-size: cover;
+        cursor: pointer;
       }
     }
   }
